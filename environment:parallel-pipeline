@@ -1,5 +1,5 @@
 pipeline {
-   agent any;
+   agent any
    environment {
      Name = 'VARSHA'
     }
@@ -19,7 +19,7 @@ pipeline {
             }
           }
           stage ('test') {
-          parallel
+          parallel {
            stage ('test on chrome') {
             steps {
               echo "this is test on chrome browser"
@@ -34,6 +34,7 @@ pipeline {
           }
           }
           }
+         }
          }
          
         
