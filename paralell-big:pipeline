@@ -1,0 +1,49 @@
+pipeline {
+  agent any;
+    stages {
+      stage ('Build') {
+      steps {
+      echo "This is Build stage"
+      sh '''
+        sleep 5
+      '''
+      }
+     }
+    stage ('Test Parallel') {
+     parallel {
+      stage ('Test on Chrome') {
+      steps {
+      echo "This is test on Chrome broswer"
+      sh '''
+       sleep 5
+      '''
+      }
+     }
+     stage ('Test on Safary') {
+      steps {
+      echo "This is test on safary"
+      sh ''' 
+       sleep 5
+      '''
+      }
+     }
+    }
+   }
+   stage ('Deploy') {
+      steps {
+      echo "This is Deploy stage"
+      sh '''
+        sleep 5
+      '''
+      }
+     }
+     stage ('Test') {
+      steps {
+      echo "This is Test stage"
+      sh '''
+        sleep 5
+      '''
+      }
+     }
+    }
+   }

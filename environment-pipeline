@@ -1,0 +1,32 @@
+pipeline {
+   agent none;
+   environment {
+     Name = 'VARSHA'
+    }
+      stages {
+         stage ('Build') {
+         agent any;
+            steps {
+            sh '''
+            echo "$Name"
+            '''
+            }
+          }
+         stage ('Deploy') {
+         agent any;
+            steps {
+            sh '''
+            echo "This is Deploy stage"
+            '''
+            }
+          }
+          stage ('test') {
+         agent any;
+            steps {
+            sh '''
+            echo "$Name"
+            '''
+            }
+          }
+         }
+        }
