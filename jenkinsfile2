@@ -1,0 +1,25 @@
+pipeline {
+  agent any 
+    stages {
+      stage ('BUILD') {
+        steps {
+               echo "This is build stage by webhook"
+            
+         }
+        }
+        stage ('DEPLOY') {
+          steps {
+             echo "This is deploy stage by webhook"
+                
+          }
+        }
+          stage ('TEST') {
+            steps {
+               echo "This is a Test stage by webhook"
+                
+             }
+           }
+         }
+      }
+         
+                
