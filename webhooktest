@@ -3,12 +3,12 @@ pipeline {
     stages {
       stage ('TEST') {
         parallel {
-          stage ('TEST11') {
+          stage ('TEST111') {
             steps {
               echo "This is Test1"
              }
             }
-            stage ('TEST12') {
+            stage ('TEST112') {
               steps {
                 echo "This is test2"
                 }
