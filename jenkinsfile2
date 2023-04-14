@@ -3,19 +3,19 @@ pipeline {
     stages {
       stage ('BUILD') {
         steps {
-               echo "This is build stage by webhook"
+               echo "This is build stage by webhook123"
             
          }
         }
         stage ('DEPLOY') {
           steps {
-             echo "This is deploy stage by webhook"
+             echo "This is deploy stage by webhook123"
                 
           }
         }
           stage ('TEST') {
             steps {
-               echo "This is a Test stage by webhook"
+               echo "This is a Test stage by webhook123"
                 
              }
            }
