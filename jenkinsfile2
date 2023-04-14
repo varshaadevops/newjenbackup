@@ -3,7 +3,7 @@ pipeline {
     stages {
       stage ('BUILD') {
         steps {
-               echo "This is build stage by webhook123"
+               echo "This is build stage by webhook123 and only for this?"
             
          }
         }
